@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fbf8f3">
+<title>Nuestra boda | 11 de diciembre de 2027</title>
+<style>
+:root{--paper:#fbf8f3;--ink:#253b4a;--muted:#68747a;--blue:#405c6d;--line:#e5ddd2;--white:#fffefa;--gold:#b89b6a;--danger:#963b3b;--success:#2d6a4f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+.wrap{width:min(100% - 32px,980px);margin:auto}.hero{min-height:74vh;display:grid;place-items:center;padding:52px 0;text-align:center;background:radial-gradient(ellipse at 50% 0%,#e8edf0 0%,transparent 58%),var(--paper)}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font:11px/1.8 Arial,sans-serif;color:var(--blue)}h1{font-size:clamp(40px,8vw,76px);line-height:1.05;font-weight:400;margin:20px 0 16px}.amp{display:block;color:var(--gold);font-style:italic;font-size:.62em;margin:7px 0}
+.date{font:12px/1.8 Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;margin-top:24px}.ornament{width:84px;height:1px;background:var(--gold);margin:24px auto}.intro{max-width:580px;margin:auto;color:var(--muted);font-size:18px;line-height:1.8}
+.button{display:inline-block;border:0;border-radius:2px;background:var(--blue);color:white;padding:14px 22px;text-decoration:none;font:12px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}.button:hover{background:#304957}
+section{padding:60px 0;border-top:1px solid var(--line)}.section-title{text-align:center;font-size:clamp(28px,4vw,42px);font-weight:400;margin:0 0 12px}.section-lead{text-align:center;color:var(--muted);font:14px/1.8 Arial,sans-serif;margin:0 auto 32px;max-width:600px}
+.details{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.detail{background:var(--white);border:1px solid var(--line);padding:24px 18px;text-align:center;min-height:145px}.detail h3{font-weight:400;font-size:21px;margin:0 0 10px}.detail p{color:var(--muted);font:13px/1.8 Arial,sans-serif;margin:0;overflow-wrap:anywhere}
+.note{max-width:650px;margin:24px auto 0;text-align:center;color:var(--muted);font:13px/1.8 Arial,sans-serif}.rsvp-card{max-width:600px;margin:auto;background:var(--white);border:1px solid var(--line);padding:clamp(22px,5vw,42px)}
+label{display:block;font:12px/1.5 Arial,sans-serif;color:var(--blue);margin:18px 0 7px}select{width:100%;padding:13px 12px;border:1px solid #d7d0c7;border-radius:2px;background:white;color:var(--ink);font:15px Arial,sans-serif}
+.help{color:var(--muted);font:12px/1.7 Arial,sans-serif;margin:8px 0 0}.status{display:none;margin-top:18px;padding:13px;font:13px/1.7 Arial,sans-serif;overflow-wrap:anywhere}.status.show{display:block}.status.error{background:#f8eaea;color:var(--danger)}.status.success{background:#e9f3ed;color:var(--success)}.status.info{background:#edf2f5;color:var(--blue)}.saved-response{margin-top:18px;padding:22px;background:#e9f3ed;border:1px solid #cfe2d5;text-align:center;color:var(--success);font:14px/1.8 Arial,sans-serif}.saved-response h3{font:normal 24px/1.3 Georgia,"Times New Roman",serif;margin:0 0 10px;color:var(--ink)}
+.submit-row{margin-top:24px}.submit-row .button{width:100%}.hidden{display:none!important}footer{padding:34px 0 46px;text-align:center;color:var(--muted);font:11px/1.8 Arial,sans-serif;letter-spacing:.08em}.hidden-frame{position:absolute;width:1px;height:1px;border:0;left:-9999px}
+@media(max-width:650px){.details{grid-template-columns:1fr}.hero{min-height:72vh}section{padding:46px 0}}
+</style></head>
+<body>
+<header class="hero"><div class="wrap">
+<div class="eyebrow">Con la alegría de compartir nuestra historia</div>
+<h1><span id="nombre1">Nuestros nombres</span><span class="amp">&</span><span id="nombre2">Nuestra boda</span></h1>
+<div class="ornament"></div><p class="intro">Hay momentos que se vuelven inolvidables cuando los compartimos con las personas que queremos. Nos encantaría que formaras parte de este día tan especial.</p>
+<div class="date">Sábado · 11 de diciembre · 2027</div><div class="ornament"></div><a class="button" href="#confirmacion">Confirmar asistencia</a>
+</div></header>
+<main>
+<section id="detalles"><div class="wrap"><h2 class="section-title">Un día para recordar</h2><p class="section-lead">Estamos preparando cada detalle con mucho cariño. Guarda esta página; aquí encontrarás la información de nuestra celebración.</p>
+<div class="details"><article class="detail"><h3>La fecha</h3><p>11 de diciembre de 2027<br>Fecha tentativa</p></article><article class="detail"><h3>La ceremonia</h3><p>Próximamente compartiremos el horario y el lugar.</p></article><article class="detail"><h3>La celebración</h3><p>Los detalles de la recepción se actualizarán cuando estén confirmados.</p></article></div>
+<p class="note">Código de vestimenta, mapa, galería de fotografías y horarios se agregarán cuando estén definidos.</p></div></section>
+<section id="confirmacion"><div class="wrap"><h2 class="section-title">¿Nos acompañas?</h2><p class="section-lead" id="rsvpIntro">Abre tu invitación personal para confirmar tu asistencia.</p>
+<div class="rsvp-card">
+<div id="inviteLoading" class="status show info">Estamos verificando tu invitación…</div>
+<div id="inviteInvalid" class="status error hidden" role="alert">No pudimos validar este enlace. Abre el enlace personal que recibiste con tu invitación o contacta a los anfitriones.</div>
+<div id="savedResponse" class="saved-response hidden" role="status" aria-live="polite"></div>
+<form id="rsvpForm" class="hidden">
+<input type="hidden" id="codigo" name="codigo"><input type="hidden" id="token" name="token">
+<p id="inviteMessage" class="help">Tu invitación ha sido identificada.</p>
+<label for="respuesta">Tu respuesta</label><select id="respuesta" name="respuesta" required><option value="asistira">¡Sí, ahí estaré!</option><option value="no_asistira">Lo siento, no podré asistir</option></select>
+<div id="attendanceCountGroup"><label for="asistentes">Número de asistentes (incluyéndote)</label><select id="asistentes" name="numero_asistentes" required></select><p class="help">El número de asistentes no puede superar el cupo autorizado para esta invitación.</p></div>
+<div class="submit-row"><button class="button" id="submitButton" type="submit">Enviar confirmación</button></div><div id="status" class="status" role="status" aria-live="polite"></div>
+</form>
+<form id="postForm" class="hidden-frame" method="post" target="postFrame"><input type="hidden" name="payload" id="payload"></form><iframe name="postFrame" id="postFrame" class="hidden-frame" title="Respuesta de confirmación"></iframe>
+</div></div></section></main><footer>CON CARIÑO · NUESTRA BODA · 2027</footer>
+<script>
+/* Reemplaza por la URL canónica /exec de tu aplicación de Apps Script. */
+const API_URL = "https://script.google.com/macros/s/AKfycbwIi39r6aUzRi4U4lKC9x90GP3BkzvN1YRfIrx42RC6QZ5VWXxTZzvFSPHX0G9avvtU/exec";
+const params = new URLSearchParams(window.location.search);
+const codigo = (params.get("i") || "").trim();
+const token = (params.get("t") || "").trim();
+const form = document.getElementById("rsvpForm"), postForm = document.getElementById("postForm");
+const payloadInput = document.getElementById("payload"), iframe = document.getElementById("postFrame");
+const statusBox = document.getElementById("status"), submitButton = document.getElementById("submitButton");
+const respuestaSelect = document.getElementById("respuesta"), asistentesSelect = document.getElementById("asistentes");
+const loadingBox = document.getElementById("inviteLoading"), invalidBox = document.getElementById("inviteInvalid");
+const inviteMessage = document.getElementById("inviteMessage"), attendanceCountGroup = document.getElementById("attendanceCountGroup");
+let awaitingSubmit = false, submitPayload = null, maxGuests = 1;
+
+function showStatus(message,type){
+  statusBox.textContent=message;
+  statusBox.className="status show "+type;
+}
+
+function showInvalid(message){
+  loadingBox.classList.add("hidden");
+  form.classList.add("hidden");
+  document.getElementById("savedResponse").classList.add("hidden");
+  invalidBox.textContent=message||"No pudimos validar este enlace. Contacta a los anfitriones.";
+  invalidBox.classList.remove("hidden");
+}
+
+function jsonp(action,paramsObj){return new Promise((resolve,reject)=>{
+  const callbackName="rsvpCallback_"+Date.now()+"_"+Math.floor(Math.random()*100000);
+  const script=document.createElement("script");
+  const timeout=setTimeout(()=>finish(new Error("Tiempo de espera agotado.")),8000);
+  function finish(err,result){
+    clearTimeout(timeout);
+    try{delete window[callbackName]}catch(_){window[callbackName]=undefined}
+    script.remove();
+    err?reject(err):resolve(result);
+  }
+  window[callbackName]=data=>finish(null,data);
+  script.onerror=()=>finish(new Error("No se pudo conectar con el servicio."));
+  const query=new URLSearchParams({action,...paramsObj,callback:callbackName,t:String(Date.now())});
+  script.src=API_URL+"?"+query.toString();
+  document.body.appendChild(script);
+});}
+
+function configureAttendanceOptions(max){
+  maxGuests=Math.max(1,Math.min(20,Number(max)||1));
+  asistentesSelect.replaceChildren();
+  for(let n=1;n<=maxGuests;n++){
+    const option=document.createElement("option");
+    option.value=String(n);
+    option.textContent=n===1?"1 persona":n+" personas";
+    asistentesSelect.appendChild(option);
+  }
+  inviteMessage.textContent="Invitación validada. Cupo autorizado: "+maxGuests+(maxGuests===1?" persona.":" personas.");
+}
+
+function updateAttendanceOptions(){
+  const declined=respuestaSelect.value==="no_asistira";
+  attendanceCountGroup.classList.toggle("hidden",declined);
+  asistentesSelect.required=!declined;
+}
+respuestaSelect.addEventListener("change",updateAttendanceOptions);
+
+function showSavedResponse(result){
+  loadingBox.classList.add("hidden");
+  invalidBox.classList.add("hidden");
+  form.classList.add("hidden");
+
+  const box=document.getElementById("savedResponse");
+  const response=String(result.respuesta||"");
+  const count=Number(result.numero_asistentes)||0;
+  let title, detail;
+
+  if(response==="asistira"){
+    title="¡Gracias por confirmar!";
+    detail="Tu respuesta quedó registrada: asistirás a nuestra boda.";
+    detail+=" Número de asistentes registrado: "+count+(count===1?" persona.":" personas.");
+  }else if(response==="no_asistira"){
+    title="Gracias por avisarnos";
+    detail="Tu respuesta quedó registrada: nos indicaste que no podrás asistir.";
+  }else{
+    title="Tu respuesta ya está registrada";
+    detail="Si necesitas corregirla, comunícate directamente con Said y Saharabi.";
+  }
+
+  box.replaceChildren();
+  const heading=document.createElement("h3");
+  heading.textContent=title;
+  const paragraph=document.createElement("p");
+  paragraph.textContent=detail;
+  const note=document.createElement("p");
+  note.textContent="Esta respuesta no se puede modificar desde la invitación. Si necesitas corregirla, contacta a los anfitriones.";
+  box.append(heading,paragraph,note);
+  box.classList.remove("hidden");
+}
+
+async function consultarEstadoActual(){
+  return jsonp("status",{codigo,token});
+}
+
+async function verifySaved(expected){
+  for(let i=0;i<6;i++){
+    try{
+      const result=await consultarEstadoActual();
+      if(result&&result.ok&&result.encontrada){
+        // Si ya existía otra respuesta, mostrar la que realmente quedó guardada.
+        if(result.respuesta===expected.respuesta &&
+           Number(result.numero_asistentes)===expected.numero_asistentes){
+          showSavedResponse(result);
+          return true;
+        }
+        showSavedResponse(result);
+        return false;
+      }
+      if(result&&result.ok===false){
+        showStatus(result.mensaje||"No se pudo validar la invitación.","error");
+        return false;
+      }
+    }catch(_){}
+    await new Promise(resolve=>setTimeout(resolve,1000));
+  }
+  showStatus("No pudimos verificar el registro automáticamente. No vuelvas a enviar la respuesta; contacta a los anfitriones para comprobarla.","info");
+  return false;
+}
+
+iframe.addEventListener("load",async()=>{
+  if(!awaitingSubmit||!submitPayload)return;
+  awaitingSubmit=false;
+  const expected=submitPayload;
+  await verifySaved(expected);
+  submitButton.disabled=false;
+  submitButton.textContent="Enviar confirmación";
+  submitPayload=null;
+});
+
+form.addEventListener("submit",event=>{
+  event.preventDefault();
+  if(!codigo||!token||awaitingSubmit)return;
+
+  if(!API_URL.startsWith("https://script.google.com/macros/s/")||API_URL.includes("PEGA_AQUI")){
+    showStatus("El sitio todavía no está configurado con la URL del servicio.","error");
+    return;
+  }
+
+  const respuesta=respuestaSelect.value;
+  const count=respuesta==="no_asistira"?0:Number(asistentesSelect.value);
+
+  if(!["asistira","no_asistira"].includes(respuesta) ||
+     (respuesta==="asistira" && (!Number.isInteger(count)||count<1||count>maxGuests))){
+    showStatus("Revisa tu respuesta y el número de asistentes.","error");
+    return;
+  }
+
+  submitPayload={codigo,token,respuesta,numero_asistentes:count};
+  payloadInput.value=JSON.stringify(submitPayload);
+  postForm.action=API_URL;
+  awaitingSubmit=true;
+  submitButton.disabled=true;
+  respuestaSelect.disabled=true;
+  asistentesSelect.disabled=true;
+  submitButton.textContent="Enviando…";
+  showStatus("Estamos enviando tu respuesta. Por favor, espera un momento.","info");
+  postForm.submit();
+});
+
+async function init(){
+  if(!API_URL.startsWith("https://script.google.com/macros/s/")||API_URL.includes("PEGA_AQUI")){
+    showInvalid("El sitio todavía no está configurado con la URL del servicio. Contacta a los anfitriones.");
+    return;
+  }
+
+  if(!codigo||!token){
+    showInvalid("Este enlace no contiene una invitación personal válida. Abre el enlace que recibiste o contacta a los anfitriones.");
+    return;
+  }
+
+  try{
+    const result=await jsonp("invitation",{codigo,token});
+    if(!result||!result.ok||!result.valida){
+      showInvalid((result&&result.mensaje)||"La invitación no es válida o está deshabilitada.");
+      return;
+    }
+
+    configureAttendanceOptions(result.cupo_maximo);
+
+    // Consultar primero si ya existe una respuesta para esta invitación.
+    const estado=await consultarEstadoActual();
+    if(!estado||estado.ok!==true){
+      showInvalid("No pudimos comprobar si esta invitación ya tiene una respuesta. Recarga la página más tarde o contacta a los anfitriones.");
+      return;
+    }
+
+    loadingBox.classList.add("hidden");
+    invalidBox.classList.add("hidden");
+
+    if(estado.encontrada){
+      showSavedResponse(estado);
+      return;
+    }
+
+    form.classList.remove("hidden");
+    respuestaSelect.disabled=false;
+    asistentesSelect.disabled=false;
+    submitButton.disabled=false;
+    updateAttendanceOptions();
+  }catch(error){
+    showInvalid("No pudimos verificar tu invitación o su estado en este momento. Inténtalo más tarde.");
+  }
+}
+
+init();
+</script></body></html>
